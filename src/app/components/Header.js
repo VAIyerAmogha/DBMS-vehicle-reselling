@@ -30,12 +30,6 @@ export default function Header() {
         <Link href="/" className="hover:underline">
           Home
         </Link>
-        <Link
-          href="/dashboard"
-          className="text-sm font-medium text-gray-700 hover:text-black"
-        >
-          Dashboard
-        </Link>
 
         {!user && (
           <>
@@ -60,6 +54,12 @@ export default function Header() {
               className="text-sm font-medium text-gray-700 hover:text-black"
             >
               Buy a Vehicle
+            </Link>
+            <Link
+              href="/dashboard"
+              className="text-sm font-medium text-gray-700 hover:text-black"
+            >
+              Dashboard
             </Link>
             <button
               onClick={handleLogout}
