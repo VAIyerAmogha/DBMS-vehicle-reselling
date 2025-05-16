@@ -24,15 +24,25 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen p-6">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-blue-600 mb-4">
-          Welcome to Vehicle Reselling
+      <div className="max-w-4xl mx-auto min-h-[400px] py-8">
+        <h1 className="text-4xl font-bold text-blue-600 mb-8">
+          Vehicle Reselling Platform
         </h1>
-        <p className="text-gray-700">
-          This is a test page to verify Tailwind CSS is working correctly.
-        </p>
+        <div className="flex items-center gap-8 mb-6 min-h-[200px]">
+          <p className="text-gray-700 flex-1 text-lg leading-relaxed">
+            Discover, buy, and sell pre-owned vehicles with ease. Our platform
+            connects buyers and sellers, providing a seamless experience for
+            listing and finding quality vehicles. Browse the latest listings
+            below and find your next ride today!
+          </p>
+          <img
+            src="https://thumbs.dreamstime.com/b/car-bike-duo-vintage-show-showcasing-classic-designs-retro-aesthetics-vibrant-outdoor-setting-340255496.jpg"
+            alt="Vehicle showcase"
+            className="w-64 h-48 object-cover rounded-lg shadow-md"
+          />
+        </div>
       </div>
-      <br></br>
+      <br />
 
       <h1 className="text-2xl font-semibold mb-4">Available Vehicles</h1>
 

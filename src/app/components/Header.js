@@ -17,54 +17,42 @@ export default function Header() {
     localStorage.removeItem("user");
     setUser(null);
   };
+  const buttonClasses =
+    "inline-block px-4 py-2 bg-blue-500 text-white rounded-lg transition-colors duration-200 hover:bg-blue-700";
 
   return (
     <header className="bg-gray-100 shadow p-4 flex justify-between items-center">
       <h1 className="text-xl font-semibold">Vehicle Reselling</h1>
       <nav className="space-x-4">
         {user && (
-          <>
-            <span>Welcome, {user.username}</span>
-          </>
+          <span className="mr-4 text-gray-700">Welcome, {user.username}</span>
         )}
-        <Link href="/" className="hover:underline">
+        <Link href="/" className={buttonClasses}>
           Home
         </Link>
 
         {!user && (
           <>
-            <Link href="/login" className="hover:underline">
+            <Link href="/login" className={buttonClasses}>
               Login
             </Link>
-            <Link href="/register" className="hover:underline">
+            <Link href="/register" className={buttonClasses}>
               Register
             </Link>
           </>
         )}
         {user && (
           <>
-            <Link
-              href="/sell"
-              className="text-sm font-medium text-gray-700 hover:text-black"
-            >
+            <Link href="/sell" className={buttonClasses}>
               Sell a Vehicle
             </Link>
-            <Link
-              href="/buy"
-              className="text-sm font-medium text-gray-700 hover:text-black"
-            >
+            <Link href="/buy" className={buttonClasses}>
               Buy a Vehicle
             </Link>
-            <Link
-              href="/dashboard"
-              className="text-sm font-medium text-gray-700 hover:text-black"
-            >
+            <Link href="/dashboard" className={buttonClasses}>
               Dashboard
             </Link>
-            <button
-              onClick={handleLogout}
-              className="ml-4 px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
-            >
+            <button onClick={handleLogout} className={buttonClasses}>
               Logout
             </button>
           </>
