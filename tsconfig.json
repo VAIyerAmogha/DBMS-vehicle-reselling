@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/app/api/offers/accept/route.js",
+    "src/app/api/offers/recieved/[userId]/route.js",
+    "src/app/api/offers/route.js",
+    "src/app/api/register/route.js",
+    "src/app/api/login/route.js",
+    "src/app/api/transactions/[userId]/route.js",
+    "src/app/api/vehicles/route.js"
+  ],
+  "exclude": ["node_modules"]
+}
